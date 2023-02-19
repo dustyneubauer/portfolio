@@ -294,3 +294,46 @@ li:last-child:before {
   .testimonial-wrapper{
     position: relative;
   }
+
+
+  .style-line {
+    display: flex;
+  }
+
+  .icon-line{
+    width: 100%;
+    position: relative;
+    margin: 15px 0 15px 10px;
+    border-bottom: 1.5px solid #85878B;
+  }
+
+  .icon-line-left{
+    width: 100%;
+    position: relative;
+    margin: 15px 10px 15px 0;
+    border-bottom: 1.5px solid #85878B;
+  }
+
+.icon-line-left-top {
+  width: 5%;
+  position: relative;
+  margin: 15px 10px 15px 0;
+  border-bottom: 1.5px solid #85878B;
+}
+
+  .icon-zigzag {
+    position: relative;
+    top: 3px;
+    left: 0px;
+    color: #D50E46;
+    height: 20px;
+    width: 20px;
+  }
+
+
+  .zigzag {
+    height: 25px;
+    width: 25px;
+    color: #D50E46;
+  }
+    

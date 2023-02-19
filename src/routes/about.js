@@ -1,13 +1,18 @@
 import ProgressBar from "../components/progressBar";
 import {FaToolbox} from 'react-icons/fa';
 import {GiGraduateCap} from 'react-icons/gi';
+import { CgShapeZigzag } from "react-icons/cg";
 
 export default function About() {
     return (
         <div id="about-me">
             <div className="title">
                 <h3>Who Am I</h3>
-                <hr></hr>
+                <div className="style-line">
+                    <div className="icon-line-left-top"></div>
+                    <div className="icon-zigzag"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+                </div>
             </div>
             <div id="my-info">
                 <h2>Dusty Neubauer</h2>
@@ -54,7 +59,11 @@ export default function About() {
             <div className="title">
                 <h3>Professional Skills</h3>
             </div>
-            <hr></hr>
+            <div className="style-line">
+                    <div className="icon-line-left-top"></div>
+                    <div className="icon"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+             </div>
             <br></br>
             <div className="skills-flex-box">
                 <div className="coding">
@@ -97,7 +106,11 @@ export default function About() {
             <div className="title">
                 <h3>Experience</h3>
             </div>
-            <hr></hr>
+            <div className="style-line">
+                    <div className="icon-line-left-top"></div>
+                    <div className="icon"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+            </div>
             <br></br>
             <div className="experience">
             <FaToolbox className="toolbox" />
@@ -119,7 +132,11 @@ export default function About() {
             <div className="title">
                 <h3>Education</h3>
             </div>
-            <hr></hr>
+            <div className="style-line">
+                    <div className="icon-line-left-top"></div>
+                    <div className="icon"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+            </div>
             <br></br>
             <div className="experience">
             <GiGraduateCap className="toolbox" />
@@ -141,7 +158,11 @@ export default function About() {
             <div className="title">
                 <h3>Testimonials</h3>
             </div>
-            <hr></hr>
+            <div className="style-line">
+                    <div className="icon-line-left-top"></div>
+                    <div className="icon"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+            </div>
             <br></br>
                 <div className="testimonial-wrapper">
                     <div className="testimonial">
@@ -154,6 +175,11 @@ export default function About() {
                         <img src={require("../images/aj.png")}/>
                     </div>
                 </div>    
+                <div className="style-line">
+                    <div className="icon-line-left"></div>
+                    <div className="icon"><CgShapeZigzag className="zigzag"/></div>
+                    <div className="icon-line"></div>
+                </div>
         </div>    
     )
 }
