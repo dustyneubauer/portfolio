@@ -36,7 +36,7 @@ export default function Root() {
                 </ul>
                 <div id="social">
                     <ul>
-                        <li><BsFacebook/></li>
+                       <li><BsFacebook/></li>
                         <li><BsTwitter/></li>
                         <li><BsInstagram/></li>
                     </ul>
