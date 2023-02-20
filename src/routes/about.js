@@ -25,34 +25,38 @@ export default function About() {
                 <div className="table-flex-box">
                     <div id="left-table">
                     <table>
-                        <tr>
-                            <th>Name</th>
-                            <td>Dusty Neubauer</td>
-                        </tr>
-                        <tr>
-                            <th>Date of Birth</th>
-                            <td>3/13/1989</td>
-                        </tr>
-                        <tr>
-                            <th>Address</th>
-                            <td>2380 Daytona Speedway De Pere</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Name</th>
+                                <td>Dusty Neubauer</td>
+                            </tr>
+                            <tr>
+                                <th>Date of Birth</th>
+                                <td>3/13/1989</td>
+                            </tr>
+                            <tr>
+                                <th>Address</th>
+                                <td>2380 Daytona Speedway De Pere</td>
+                            </tr>
+                        </tbody>    
                     </table>
                     </div>
                     <div id="right-table">
                     <table>
-                        <tr>
-                            <th>Email</th>
-                            <td>dustyneubauer@gmail.com</td>
-                        </tr>
-                        <tr>
-                            <th>Phone</th>
-                            <td>715-853-7813</td>
-                        </tr>
-                        <tr>
-                            <th>Skype</th>
-                            <td>dusty_neubauer</td>
-                        </tr>
+                        <tbody>
+                            <tr>
+                                <th>Email</th>
+                                <td>dustyneubauer@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <th>Phone</th>
+                                <td>715-853-7813</td>
+                            </tr>
+                            <tr>
+                                <th>Skype</th>
+                                <td>dusty_neubauer</td>
+                            </tr>
+                        </tbody>    
                     </table>
                     </div>
                 </div>

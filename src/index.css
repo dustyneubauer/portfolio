@@ -58,6 +58,14 @@ body {
   text-decoration: none;
 }
 
+#social li a:hover{
+  color: #D50E46;
+}
+
+#social li a:visited{
+  color: #85878B;
+}
+
 .icon {
   height: 20px;
   width: 20px;
@@ -365,4 +373,25 @@ li:last-child:before {
     margin-right: 20px;
     height: 15px;
     width: 15px;
+  }
+
+  .github-portfolio button{
+    height: 22px;
+  width: 150px;
+  background-color: #33373D;
+  color: white;
+  text-align: ;
+  vertical-align: middle;
+  padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  margin: 10px;
+  font-size: .8em;
+  border: none;
+  }
+    
+  .github-portfolio button:hover{
+    color: white;
+    background-color: #D50E46;
+    text-decoration: none;
+    cursor: pointer;
   }

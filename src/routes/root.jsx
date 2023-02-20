@@ -36,9 +36,9 @@ export default function Root() {
                 </ul>
                 <div id="social">
                     <ul>
-                       <li><BsFacebook/></li>
-                        <li><BsTwitter/></li>
-                        <li><BsInstagram/></li>
+                       <li><a href="https://www.facebook.com/dusty.neubauer"><BsFacebook/></a></li>
+                        <li><a href="https://twitter.com/dustyneubauer"><BsTwitter/></a></li>
+                        <li><a href="https://instagram.com/dustyneubauer"><BsInstagram/></a></li>
                     </ul>
                 </div>  
           </nav>
