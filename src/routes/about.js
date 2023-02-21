@@ -186,7 +186,7 @@ export default function About() {
                     <div className="icon-line"></div>
                 </div>
                 <div className="resume">
-                    <a href="../images/neubauer_resume.pdf" download={"neubauer_resume"} ><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
+                    <a href="../images/neubauer_resume.png" download><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
                 </div>
         </div>    
     )

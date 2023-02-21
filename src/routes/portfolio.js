@@ -3,6 +3,7 @@ import { FaClipboard } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadUserData, selectUser, isLoading } from "../slices/loadUserSlice";
+import { AiOutlineFundProjectionScreen } from "react-icons/ai";
 
 export default function Portfolio() {
     const dispatch = useDispatch();
@@ -18,6 +19,7 @@ const allRepos = filteredData.map((repo) =>{
     container.title = repo.name.toUpperCase();
     container.description = repo.description;
     container.route = repo.html_url;
+    container.image = repo.avatar_url;
     return container;
 })
 
@@ -38,14 +40,17 @@ console.log(allRepos);
                     <div className="icon-line"></div>
                 </div>  
                 <div className="github-portfolio">
+                    <AiOutlineFundProjectionScreen className="toolbox"/>
                     <ul>
                         {allRepos.map((repo)=>{
                             return(
                             <li>
-                                <h4>{repo.title}</h4>
-                                <p>{repo.description}</p>
-                                <a href={repo.route} target="_blank"><button>View On Github</button></a>
-                            </li>
+                                <div className="repos">
+                                    <h4>{repo.title}</h4>
+                                    <p>{repo.description}</p>
+                                    <a href={repo.route} target="_blank"><button>View On Github</button></a>
+                                </div>
+                            </li>   
                             )
                         })}
                     </ul>
@@ -56,7 +61,7 @@ console.log(allRepos);
                     <div className="icon-line"></div>
                 </div>
                 <div className="resume">
-                    <a href="../images/neubauer_resume.pdf" download={"neubauer_resume"} ><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
+                    <a href="../images/neubauer_resume.png" download><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
                 </div>
             </div>    
         </div>    
