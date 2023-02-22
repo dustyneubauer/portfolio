@@ -1,10 +1,13 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useLocation } from "react-router-dom";
 import {CgProfile} from "react-icons/cg"
 import {BsCameraFill, BsFacebook, BsTwitter, BsInstagram} from "react-icons/bs"
 import {GoCommentDiscussion} from "react-icons/go"
 import {AiFillPhone} from "react-icons/ai"
+import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 export default function Root() {
+    const location = useLocation();
+
     return (
       <div id="full-page">
         <div id="profilebar">
@@ -44,7 +47,14 @@ export default function Root() {
           </nav>
         </div>
         <div id="detail">
-            <Outlet/>
+            <TransitionGroup>
+                <CSSTransition 
+                 timeout={300}
+                 classNames='fade'
+                 key={location.key}>
+                    <Outlet/>
+                 </CSSTransition>
+            </TransitionGroup>
         </div>
       </div>
     );

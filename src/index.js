@@ -13,6 +13,7 @@ import About from "./routes/about";
 import Portfolio from "./routes/portfolio";
 import Contact from "./routes/contact";
 
+
 const router = createBrowserRouter([
   {
     path: "/",

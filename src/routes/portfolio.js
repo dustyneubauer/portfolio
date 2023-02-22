@@ -44,7 +44,7 @@ console.log(allRepos);
                     <ul>
                         {allRepos.map((repo)=>{
                             return(
-                            <li>
+                            <li key={repo.title}>
                                 <div className="repos">
                                     <h4>{repo.title}</h4>
                                     <p>{repo.description}</p>
