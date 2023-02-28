@@ -1,13 +1,14 @@
-import { Link, Outlet, useLocation } from "react-router-dom";
+import { Link, Outlet, useLocation, useOutlet } from "react-router-dom";
 import {CgProfile} from "react-icons/cg"
-import {BsCameraFill, BsFacebook, BsTwitter, BsInstagram} from "react-icons/bs"
+import {BsCameraFill, BsFacebook, BsInstagram, BsTwitter} from "react-icons/bs"
+import { FaTwitter } from "react-icons/fa";
+import { CgTwitter } from "react-icons/cg";
 import {GoCommentDiscussion} from "react-icons/go"
 import {AiFillPhone} from "react-icons/ai"
-import {TransitionGroup, CSSTransition} from 'react-transition-group';
 
 export default function Root() {
     const location = useLocation();
-
+    const currentOutlet = useOutlet();
     return (
       <div id="full-page">
         <div id="profilebar">
@@ -40,22 +41,15 @@ export default function Root() {
                 <div id="social">
                     <ul>
                        <li><a href="https://www.facebook.com/dusty.neubauer"><BsFacebook/></a></li>
-                        <li><a href="https://twitter.com/dustyneubauer"><BsTwitter/></a></li>
+                       <li><a href="https://twitter.com/dustyneubauer"><BsTwitter/></a></li>
                         <li><a href="https://instagram.com/dustyneubauer"><BsInstagram/></a></li>
                     </ul>
                 </div>  
           </nav>
         </div>
         <div id="detail">
-            <TransitionGroup>
-                <CSSTransition 
-                 timeout={300}
-                 classNames='fade'
-                 key={location.key}>
-                    <Outlet/>
-                 </CSSTransition>
-            </TransitionGroup>
-        </div>
+            <Outlet />
       </div>
+    </div>
     );
   }

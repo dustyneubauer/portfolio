@@ -12,7 +12,7 @@ import ErrorPage from "./routes/error-page";
 import About from "./routes/about";
 import Portfolio from "./routes/portfolio";
 import Contact from "./routes/contact";
-
+import Blog from "./routes/blog";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +32,11 @@ const router = createBrowserRouter([
     {
       path:"/contact",
       element: <Contact />,
+      errorElement: <ErrorPage />
+    },
+    {
+      path:"blog",
+      element: <Blog/>,
       errorElement: <ErrorPage />
     }
   ]},

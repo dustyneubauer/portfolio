@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { loadUserData, selectUser, isLoading } from "../slices/loadUserSlice";
 import { AiOutlineFundProjectionScreen } from "react-icons/ai";
+import { onButtonClick } from "../components/resumeDownload";
 
 export default function Portfolio() {
     const dispatch = useDispatch();
@@ -17,9 +18,9 @@ console.log(filteredData);
 const allRepos = filteredData.map((repo) =>{
     const container = {};
     container.title = repo.name.toUpperCase();
+    container.url = repo.name;
     container.description = repo.description;
     container.route = repo.html_url;
-    container.image = repo.avatar_url;
     return container;
 })
 
@@ -47,8 +48,13 @@ console.log(allRepos);
                             <li key={repo.title}>
                                 <div className="repos">
                                     <h4>{repo.title}</h4>
+                                    <a href={repo.route} target="_blank"><div className="portfolio-image-container">
+                                        <img src={require(`../images/${repo.url}.png`)} />
+                                        <div className="overlay">
+                                            <p>Click to View on GitHub</p>
+                                        </div>
+                                    </div></a>
                                     <p>{repo.description}</p>
-                                    <a href={repo.route} target="_blank"><button>View On Github</button></a>
                                 </div>
                             </li>   
                             )
@@ -61,7 +67,7 @@ console.log(allRepos);
                     <div className="icon-line"></div>
                 </div>
                 <div className="resume">
-                    <a href="../images/neubauer_resume.png" download><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
+                    <button onClick={onButtonClick} className="resume-button"><FaClipboard className="resume-icon"/>Download Resume</button>
                 </div>
             </div>    
         </div>    

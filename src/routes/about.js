@@ -3,6 +3,7 @@ import {FaToolbox} from 'react-icons/fa';
 import {GiGraduateCap} from 'react-icons/gi';
 import { CgShapeZigzag } from "react-icons/cg";
 import { FaClipboard } from "react-icons/fa";
+import { onButtonClick } from "../components/resumeDownload";
 
 export default function About() {
     return (
@@ -186,7 +187,7 @@ export default function About() {
                     <div className="icon-line"></div>
                 </div>
                 <div className="resume">
-                    <a href="../images/neubauer_resume.png" download><button className="resume-button"><FaClipboard className="resume-icon"/>View My Resume</button></a>
+                    <button onClick={onButtonClick} className="resume-button"><FaClipboard className="resume-icon"/>Download Resume</button>
                 </div>
         </div>    
     )
